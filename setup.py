@@ -7,6 +7,11 @@ setup(name='torchseal',
       author_email='ben.jer.heil@gmail.com',
       url='https://github.com/ben-heil/torchseal',
       packages=['torchseal'],
-      install_requires=['pytorch'],
-      tests_require=['pytorch', 'torchvision', 'pytest']
+      install_requires=['torch'],
+      extras_require={
+          'tests': ['torch',
+                    'torchvision',
+                    'pytest'
+                    ]
+      },
       )
