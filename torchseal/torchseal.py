@@ -17,7 +17,7 @@ class MemoryLeakWarning(RuntimeWarning):
 
 
 class LeakChecker():
-    def __init__(self, error_on_leak: bool = True):
+    def __init__(self, error_on_leak: bool=True):
         """
         The initializer for the LeakChecker object
 
