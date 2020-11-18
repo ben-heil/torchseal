@@ -1,4 +1,15 @@
+import os
 from setuptools import setup
+
+# Don't overwrite pytorch version if it's already installed (logic from
+# https://github.com/pytorch/vision/blob/master/setup.py)
+pytorch_dep = 'torch'
+if os.getenv('PYTORCH_VERSION'):
+    pytorch_dep += "==" + os.getenv('PYTORCH_VERSION')
+
+requirements = [
+    pytorch_dep,
+]
 
 setup(name='torchseal',
       version='1.0',
